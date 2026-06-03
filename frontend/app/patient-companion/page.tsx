@@ -316,8 +316,8 @@ export default function PatientCompanionPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f4efe9] pb-24 pt-3 text-slate-950 lg:bg-[radial-gradient(circle_at_top,_rgba(244,114,182,0.12),_transparent_30%),linear-gradient(135deg,#f4efe9_0%,#fbf7f3_50%,#eef2ff_100%)] lg:pb-8">
-      <div className="mx-auto grid w-full max-w-7xl gap-4 px-3 pb-4 sm:px-4 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-6 lg:px-6 xl:px-8">
+    <div className="min-h-screen bg-[#f4efe9] pb-24 pt-3 text-slate-950 sm:pb-8 lg:bg-[radial-gradient(circle_at_top,_rgba(244,114,182,0.12),_transparent_30%),linear-gradient(135deg,#f4efe9_0%,#fbf7f3_50%,#eef2ff_100%)] lg:pb-8">
+      <div className="mx-auto grid w-full max-w-7xl gap-3 px-2 pb-4 sm:gap-4 sm:px-4 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-6 lg:px-6 xl:px-8">
         <aside className="hidden lg:flex lg:flex-col lg:gap-4 lg:rounded-[2rem] lg:border lg:border-white/80 lg:bg-white/85 lg:p-5 lg:shadow-[0_18px_50px_-35px_rgba(15,23,42,0.35)] lg:backdrop-blur-md">
           <div className="rounded-[1.5rem] bg-[#111827] p-5 text-white shadow-sm">
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-rose-200">AI Maternal Monitor</p>
@@ -356,26 +356,26 @@ export default function PatientCompanionPage() {
           </div>
         </aside>
 
-        <main className="flex min-w-0 flex-col gap-4">
-        <header className="rounded-[2rem] border border-white/70 bg-[#111827] px-4 py-4 text-white shadow-[0_20px_50px_-24px_rgba(15,23,42,0.6)]">
-          <div className="flex items-center justify-between text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
+        <main className="flex min-w-0 flex-col gap-3 sm:gap-4">
+        <header className="rounded-[2rem] border border-white/70 bg-[#111827] px-3 py-3 text-white shadow-[0_20px_50px_-24px_rgba(15,23,42,0.6)] sm:px-4 sm:py-4">
+          <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.28em] text-white/70 sm:text-[11px]">
             <span>AI Maternal Monitor</span>
             <span>9:41</span>
           </div>
-          <div className="mt-3 flex items-center justify-between gap-3">
+          <div className="mt-3 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-rose-200">Patient companion</p>
-              <h1 className="mt-1 text-2xl font-semibold leading-tight text-white font-display">Maternity care in your pocket</h1>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-rose-200 sm:text-[11px]">Patient companion</p>
+              <h1 className="mt-1 text-xl font-semibold leading-tight text-white font-display sm:text-2xl">Maternity care in your pocket</h1>
             </div>
-            <div className="rounded-full bg-emerald-400/20 px-3 py-1 text-xs font-semibold text-emerald-200">Online</div>
+            <div className="rounded-full bg-emerald-400/20 px-3 py-1 text-xs font-semibold text-emerald-200 whitespace-nowrap">Online</div>
           </div>
-          <div className="mt-4 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="mt-3 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {highlightStrip.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.label} className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white/10 px-3 py-2 text-xs font-medium text-white/90 backdrop-blur">
+                <div key={item.label} className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white/10 px-3 py-2 text-[11px] font-medium text-white/90 backdrop-blur sm:text-xs">
                   <Icon className="h-3.5 w-3.5 text-rose-200" />
-                  {item.label}
+                  <span className="whitespace-nowrap">{item.label}</span>
                 </div>
               );
             })}
